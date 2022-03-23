@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+//font-family: 'Rubik Mono One', sans-serif;
+.splitScreen {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+
+}
+
+.topPane {
+    width: 67%;
+    background-color: black;
+}
+.bottomPane {
+    width: 33%;
+    background-color: #E0E0E0;
+}
+
+h1{
+    font-family: 'Rubik Mono One', sans-serif;
+    color:white;
+    float:right;
+    left:50%;
+    font-size: 100px;
+    position: absolute;
+    
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .splitScreen{
+        flex-direction: column;
+        display: table-cell;
+    }
+    .topPane{
+        width: 100vh;
+        height: 67%;
+    }
+    .bottomPane{
+        width: 100vh;
+        height: 33%;
+    }
+    h1{
+    left:12%;
+    font-size:70px;
+
+    }
+}
