@@ -18,16 +18,17 @@
 h1 {
   font-family: "Rubik Mono One", sans-serif;
   color: white;
-  float: right;
-  left: 50%;
-  font-size: 100px;
-  position: absolute;
+  /* float: right; */
+  font-size: 60px;
+  margin-left: 15px;
+  margin-top: 10px;
+  /* position: absolute; */
+  justify-content: start;
 }
 
 @media screen and (max-width: 800px) {
   .row {
     flex-direction: column;
-    display: table-cell;
   }
 
   .colMap {
@@ -40,10 +41,6 @@ h1 {
     height: 33%;
   }
 
-  h1 {
-    left: 12%;
-    font-size: 70px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
