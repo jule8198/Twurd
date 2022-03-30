@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import USAMap from "react-usa-map";
  
-export function Map() {
+export function Map({stateChangeListener}) {
     // pass in use state setter for state from App.js
     const mapHandler = (event) => {
-        alert(event.target.querySelector('title').textContent)
+        const name = event.target.querySelector('title').textContent
+        stateChangeListener(name)
       };
+
 
     return ( 
             <div className="Map">
