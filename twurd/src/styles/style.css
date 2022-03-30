@@ -43,4 +43,13 @@ h1 {
 
 }
 
+path {
+  pointer-events: all;
+}
+path:hover {
+  fill: #64D6FA;
+  opacity: 1.0;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map */
