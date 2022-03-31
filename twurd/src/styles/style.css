@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav&display=swap');
+
 .row {
   display: flex;
   flex-direction: row;
@@ -11,8 +13,31 @@
 }
 
 .colInfo {
+  display: flex;
   width: 33%;
   background-color: #E0E0E0;
+}
+.stateHeader {
+  font-family: "Yantramana", sans-serif;
+  display: flex;
+  font-size: 50px;
+}
+
+.infoSection {
+  align-self:center;
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  flex-direction: column;
+}
+
+hr {
+ 
+  background-color: black;
+  width: 100%;
+  display: flex; 
+  align-self: flex-start;
+  height: 4px;
 }
 
 h1 {

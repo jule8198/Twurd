@@ -16,7 +16,10 @@ function App() {
         <Map stateChangeListener={stateChangeListener}/>
       </div>
       <div className="colInfo">
-        <div>{state}</div>
+          <div className="infoSection">
+            <div className = "stateHeader">Top words for state: {state}</div>
+            <hr/>
+          </div>
       </div>
     </div>
   );
