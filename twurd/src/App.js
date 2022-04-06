@@ -1,7 +1,7 @@
 import {Header} from './components/header'
 import {Map} from './components/map'
 import {useState} from 'react'
-import {Bar} from './components/bar'
+import {DataSection} from './components/dataSection'
 function App() {
   const [state, setState] = useState("");
 
@@ -20,7 +20,9 @@ function App() {
           <div className="infoSection">
             <div className = "stateHeader">Top words for state: {state}</div>
             <hr/>
-            <Bar Primarycolor='0' progress='30'></Bar>
+          <DataSection Primarycolor={'0'} progress = {70} word = "hi" numTweeted={70}/>
+          <DataSection Primarycolor={'1'} progress = {30} word = "bye" numTweeted={30}/>
+          <DataSection Primarycolor={'2'} progress = {50} word = "hola" numTweeted={50}/>
           </div>
       </div>
     </div>
