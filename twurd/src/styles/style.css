@@ -2,25 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Yantramanav&display=swap');
 
 .row {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "map map info"
+  ;
 }
 
 .colMap {
-  width: 67%;
   background-color: black;
+  grid-area: map;
 }
 
 .colInfo {
-  display: flex;
-  width: 33%;
   background-color: #E0E0E0;
+  grid-area: info;
 }
+
 .stateHeader {
   font-family: "Yantramana", sans-serif;
   display: flex;
   font-size: 50px;
+  margin-top: 120px;
 }
 
 .infoSection {
@@ -46,7 +50,6 @@
 }
 
 hr {
- 
   background-color: black;
   width: 100%;
   display: flex; 
@@ -57,27 +60,22 @@ hr {
 h1 {
   font-family: "Rubik Mono One", sans-serif;
   color: white;
-  /* float: right; */
   font-size: 60px;
   margin-left: 15px;
   margin-top: 10px;
-  /* position: absolute; */
   justify-content: start;
 }
 
 @media screen and (max-width: 800px) {
   .row {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+  grid-template-areas: 
+  "map" 
+  "map" 
+  "info"
   }
-
-  .colMap {
-    width: 100vh;
-    height: 67%;
-  }
-
-  .colInfo {
-    width: 100vh;
-    height: 33%;
+  .stateHeader{
+    margin-top: 30px;
   }
 
 }
