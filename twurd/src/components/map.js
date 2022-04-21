@@ -11,7 +11,7 @@ export function Map({stateChangeListener}) {
 
     return ( 
             <div className="Map">
-              <USAMap  onClick={mapHandler} defaultFill="#D3D3D3" />
+              <USAMap  onClick={mapHandler} defaultFill="#FFFFFF" />
             </div>
     )
 }

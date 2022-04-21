@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Yantramanav&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=IBM+Plex+Serif&family=Inter:wght@400;600&family=Merriweather:wght@300;900&display=swap');
 
 .row {
   display: grid;
+  background: rgb(157,66,189);
+  background: radial-gradient(circle, rgba(157,66,189,1) 0%, rgba(3,14,82,1) 59%, rgba(6,5,22,1) 100%);
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
@@ -11,23 +14,40 @@
 }
 
 .colMap {
-  background-color: black;
+  /* background-color: black; */
+  /* background: rgb(157,66,189);
+  background: radial-gradient(circle, rgba(157,66,189,1) 0%, rgba(3,14,82,1) 59%, rgba(6,5,22,1) 100%); */
   grid-area: map;
 }
 
 .colInfo {
-  background-color: #E0E0E0;
+  /* background-color: white; */
   grid-area: info;
+  padding-right: 50px;
 }
 
 .stateHeader {
-  font-family: "Yantramana", sans-serif;
   display: flex;
   font-size: 50px;
   margin-top: 120px;
-}
+  font-family: 'Comfortaa', cursive;
 
+}
+.selectHeader{
+  font-family: 'Comfortaa', cursive;
+
+  font-size: 40px;
+  text-align: center;
+  margin-top: 300px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  color: white;
+
+
+}
 .infoSection {
+  font-family: 'Comfortaa', cursive;
+  color:white;
   align-self:center;
   display: flex;
   margin-left: 20px;
@@ -36,6 +56,8 @@
 }
 
 .dataSectionHeader {
+  font-family: 'Comfortaa', cursive;
+  color:white;
   display: flex; 
   flex-direction: row;
   justify-content: space-between;
@@ -50,7 +72,7 @@
 }
 
 hr {
-  background-color: black;
+  background-color: white;
   width: 100%;
   display: flex; 
   align-self: flex-start;
@@ -60,14 +82,27 @@ hr {
 h1 {
   font-family: "Rubik Mono One", sans-serif;
   color: white;
-  font-size: 60px;
-  margin-left: 15px;
-  margin-top: 10px;
+  font-size: 90px;
+  margin-left: 40px;
+  margin-top: 30px;
   justify-content: start;
 }
+path {
+  pointer-events: all;
+}
+path:hover {
+  fill: #ff58e3;
+  opacity: .5;
+  cursor: pointer;
+}
 
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 1000px) {
+  *{
+    background-color: black;
+  }
   .row {
+    width: 100%;
     grid-template-columns: 1fr;
   grid-template-areas: 
   "map" 
@@ -75,18 +110,29 @@ h1 {
   "info"
   }
   .stateHeader{
+    margin-top: 90px;
+    font-size: 40px;
+    
+  }
+  .selectHeader{
     margin-top: 30px;
   }
 
+  .hr{
+    width: 50%;
+  }
+  .colInfo{
+    padding-bottom: 60px;
+    padding-right: 250px;
+    padding-left: 30px;
+  }
+  path:hover{
+    fill:#4023ff;
+    opacity: 1;
+  }
 }
 
-path {
-  pointer-events: all;
-}
-path:hover {
-  fill: #64D6FA;
-  opacity: 1.0;
-  cursor: pointer;
-}
+
+
 
 /*# sourceMappingURL=style.css.map */
