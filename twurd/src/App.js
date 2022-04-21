@@ -36,9 +36,9 @@ function App() {
             <div className="infoSection">
             {json && <div className = "stateHeader">Top words for state: {json.state}</div>}
             <hr/>
-          <DataSection Primarycolor={'0'} progress = {70} word = {json.words[0]} numTweeted={70}/>
-          <DataSection Primarycolor={'1'} progress = {30} word = {json.words[1] }numTweeted={30}/>
-          <DataSection Primarycolor={'2'} progress = {50} word = {json.words[2]} numTweeted={50}/>
+          <DataSection Primarycolor={'0'} progress = {json.freq[0] * 100} word = {json.words[0]} numTweeted={json.freq[0] * 100}/>
+          <DataSection Primarycolor={'1'} progress = {json.freq[1] * 100} word = {json.words[1] }numTweeted={json.freq[1] * 100}/>
+          <DataSection Primarycolor={'2'} progress = {json.freq[2] * 100} word = {json.words[2]} numTweeted={json.freq[2] * 100}/>
           </div>}
           <div>
           </div>
