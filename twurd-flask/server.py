@@ -9,7 +9,7 @@ def get_all_frequencies():
     
 @app.route("/frequencies/<state>", methods=['GET'])
 def get_one_frequency(state):
-        return {"state": state, "words": ["doge", "football", "brother"]}
+        return {"state": state, "words": ["doge", "football", "brother"], "freq": [1, 0.8, 0.2 ]}
     
 if __name__ == "__main__":
         app.run(debug=True)
