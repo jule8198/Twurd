@@ -91,17 +91,19 @@ path {
   pointer-events: all;
 }
 path:hover {
-  fill: #ff58e3;
-  opacity: .5;
+  fill:#f423ff;
+
+  opacity: .4;
   cursor: pointer;
 }
 
 
 @media screen and (max-width: 1000px) {
   *{
-    background-color: black;
+    background: black;
   }
   .row {
+    color:none;
     width: 100%;
     grid-template-columns: 1fr;
   grid-template-areas: 
