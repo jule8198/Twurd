@@ -9,7 +9,7 @@ export const DataSection = ({Primarycolor, progress, word, numTweeted}) =>{
                     {word}
                 </div>
                 <div>
-                    Tweeted by {numTweeted} people
+                    TF-IDF Score: {numTweeted.toFixed(2)}
                 </div>
             </div>
             <Bar Primarycolor={Primarycolor} progress={progress}/>
