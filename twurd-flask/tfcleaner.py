@@ -56,8 +56,8 @@ for state, words in top9.iterrows():
         data[state]['words'].append(w)
         data[state]['freqs'].append(dfVec.loc[state, w])
     maxfreq = np.max(data[state]['freqs'])
-    for i, j in enumerate(data[state]['freqs']):
-        data[state]['freqs'][i] = data[state]['freqs'][i] / maxfreq
+    # for i, j in enumerate(data[state]['freqs']):
+    #     data[state]['freqs'][i] = data[state]['freqs'][i] / maxfreq
 
 with open('./frequencies.json', 'w') as f:
     json.dump(data, f)
