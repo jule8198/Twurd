@@ -13,7 +13,6 @@ function App() {
       res => res.json()
     ).then(
       data => {
-        console.log("HELLO")
         console.log(data)
         setJson(data)
         setStateSelected(true)
@@ -43,11 +42,11 @@ function App() {
       }
           {stateSelected &&
             <div className="infoSection">
-            {json && <div className = "stateHeader">Top words for state: {json.state}</div>}
+            {json && <div className = "stateHeader">Top words for {state}</div>}
             <hr/>
-          <DataSection Primarycolor={'0'} progress = {json.freq[0+value] * 100} word = {json.words[0+value]} numTweeted={json.freq[0+value] * 100}/>
-          <DataSection Primarycolor={'1'} progress = {json.freq[1+value] * 100} word = {json.words[1+value] }numTweeted={json.freq[1+value] * 100}/>
-          <DataSection Primarycolor={'2'} progress = {json.freq[2 +value] * 100} word = {json.words[2+value]} numTweeted={json.freq[2+value] * 100}/>
+          <DataSection Primarycolor={'0'} progress = {json.freqs[0+value] * 100} word = {json.words[0+value]} numTweeted={json.freqs[0+value] * 100}/>
+          <DataSection Primarycolor={'1'} progress = {json.freqs[1+value] * 100} word = {json.words[1+value] }numTweeted={json.freqs[1+value] * 100}/>
+          <DataSection Primarycolor={'2'} progress = {json.freqs[2 +value] * 100} word = {json.words[2+value]} numTweeted={json.freqs[2+value] * 100}/>
           <div className="button">
           {
             (value === 3 || value === 6) &&  <button onClick={decrement}>{'<'}</button>
