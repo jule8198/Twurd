@@ -6,7 +6,8 @@
   display: grid;
   background: rgb(157,66,189);
   background: radial-gradient(circle, rgba(157,66,189,1) 0%, rgba(3,14,82,1) 59%, rgba(6,5,22,1) 100%);
-  height: 100vh;
+  min-height: 100vh;
+  max-height:110vh;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
   "map map info"
@@ -95,6 +96,30 @@ path:hover {
 
   opacity: .4;
   cursor: pointer;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  background: white;
+  color: black; 
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  opacity: .5;
+  margin: 10px;
+  font-size: large;
+  font-weight: bolder;
+  
+}
+
+.button{
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 

@@ -3,6 +3,6 @@ import '../styles/style.css'
 
 export const Header = () => {
   return (
-    <h1>TWURD</h1>
+    <h1>twurd</h1>
   )
 }
