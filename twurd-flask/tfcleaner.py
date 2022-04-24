@@ -46,6 +46,14 @@ data = {'Alaska': {'words': ['kulayrosasangbukas', 'apply'], 'freq': [2,1]}}
 #     for j in range(len(i)):
 #         print(top9.iloc[[i,j]])
 
-for i in top9:
-    for j in i:
-        print(j)
+data = {}
+
+print(dfcVec.loc['California', 'aa'])
+
+for state, words in top9.iterrows():
+    data[state] = {'words': [], 'freqs': []}
+    for w in words:
+        data[state]['words'].append(w)
+        data[state]['freqs'].append(dfcVec.loc[state, w])
+
+print(data)
