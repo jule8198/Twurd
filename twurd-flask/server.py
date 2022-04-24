@@ -7,6 +7,8 @@ import os
 
 app = Flask(__name__)
 
+#open file
+
 def main(): 
         load_dotenv()
         client = MongoClient(os.getenv('MONGO_CLIENT'), tls=True, tlsAllowInvalidCertificates=True)
