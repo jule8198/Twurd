@@ -30,7 +30,7 @@ function App() {
       </div>
       <div className="colInfo">
       {
-        !stateSelected && <div>select a state</div>
+        !stateSelected && <div className = "selectHeader">Select a state to begin</div>
       }
           {stateSelected &&
             <div className="infoSection">
