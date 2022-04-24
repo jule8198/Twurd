@@ -11,7 +11,7 @@ def main():
         load_dotenv()
         client = MongoClient(os.getenv('MONGO_CLIENT'), tls=True, tlsAllowInvalidCertificates=True)
         db = client["DaRealDeal"]
-        collection = db["us_tweets"]
+        collection = db["states"]
         for doc in collection.find():
          pprint.pprint(doc)
 
