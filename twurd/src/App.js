@@ -6,6 +6,7 @@ function App() {
   const [state, setState] = useState("");
   const [stateSelected, setStateSelected] = useState(false)
   const [json, setJson] = useState({});
+  const [value, setValue] = useState(0);
   
   const stateChangeListener = (name) =>{
     fetch("/frequencies/" + name).then(
@@ -22,6 +23,14 @@ function App() {
     )
   }
 
+  const increment=()=>{
+    setValue(prevValue => prevValue+3)
+  }
+
+  const decrement=()=>{
+    setValue(prevValue=>prevValue-3)
+  }
+
   return (
     <div className= "row">
       <div className="colMap">
@@ -36,9 +45,21 @@ function App() {
             <div className="infoSection">
             {json && <div className = "stateHeader">Top words for state: {json.state}</div>}
             <hr/>
-          <DataSection Primarycolor={'0'} progress = {json.freq[0] * 100} word = {json.words[0]} numTweeted={json.freq[0] * 100}/>
-          <DataSection Primarycolor={'1'} progress = {json.freq[1] * 100} word = {json.words[1] }numTweeted={json.freq[1] * 100}/>
-          <DataSection Primarycolor={'2'} progress = {json.freq[2] * 100} word = {json.words[2]} numTweeted={json.freq[2] * 100}/>
+          <DataSection Primarycolor={'0'} progress = {json.freq[0+value] * 100} word = {json.words[0+value]} numTweeted={json.freq[0+value] * 100}/>
+          <DataSection Primarycolor={'1'} progress = {json.freq[1+value] * 100} word = {json.words[1+value] }numTweeted={json.freq[1+value] * 100}/>
+          <DataSection Primarycolor={'2'} progress = {json.freq[2 +value] * 100} word = {json.words[2+value]} numTweeted={json.freq[2+value] * 100}/>
+          <div className="button">
+          {
+            (value === 3 || value === 6) &&  <button onClick={decrement}>{'<'}</button>
+          }
+          
+          {
+            (value === 3 || value === 0) && <button onClick={increment}>{'>'}</button>
+          }
+
+          </div>
+          
+          
           </div>}
           <div>
           </div>
